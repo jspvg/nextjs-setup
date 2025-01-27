@@ -1,0 +1,42 @@
+.embla {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  height: 100px;
+  max-width: 1410px;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+
+}
+
+.embla__slide {
+  flex: 0 0 80px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid pink;
+  scroll-snap-align: start;
+  min-width: 0;
+  border-radius: 4px
+}
+
+.embla__prev,
+.embla__next {
+  background-color: lightblue;
+  z-index: 1;
+
+  &:disabled {
+    background-color: lightgray;
+    pointer-events: none;
+  }
+}
